@@ -116,6 +116,7 @@ contract Listener is PreLiquidation$OnPreLiquidateFunction {
                 - 1
         ) / (market.totalBorrowShares + 1e6) + outputs.outArg1;
 
+
         uint256 ltv = (borrowed * 1e18 + collateralQuoted - 1) / collateralQuoted;
 
         emit PreLiquidationHealth(uint64(block.chainid), ctx.txn.hash, ltv);
